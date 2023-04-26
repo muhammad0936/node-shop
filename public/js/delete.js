@@ -1,5 +1,6 @@
 
 const deleteProduct = (btn) => {
+    console.log('delete button has clicked!')
     const prodId = btn.parentNode.querySelector('[name = productId]').value;
     const csrtToken = btn.parentNode.querySelector('[name = _csrf]').value;
     const clickedBtn = btn.closest('article');

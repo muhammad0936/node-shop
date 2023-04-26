@@ -15,9 +15,8 @@ const morgan = require('morgan');
 const https = require('https');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
-
 const MONGODB_URI =
-  'mongodb://localhost:27017/?directConnection=true';
+'mongodb+srv://user:1234@cluster0.1o4mdx1.mongodb.net/test?retryWrites=true&w=majority';
 
 const app = express();
 const store = new MongoDBStore({

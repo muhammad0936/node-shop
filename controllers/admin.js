@@ -215,7 +215,7 @@ exports.getProducts = (req, res, next) => {
 
 exports.deleteProduct = (req, res, next) => {
   const prodId = req.params.prodId;
-
+console.log(prodId)
   Product.findById(prodId)
   .then(product => {
     if(!product)
