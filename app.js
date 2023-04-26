@@ -112,9 +112,13 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(MONGODB_URI,{ useUnifiedTopology: true,   writeConcern: {
+    w: 'majority',
+    j: true,
+    wtimeout: 1000
+  }})
   .then(result => {
-    https.createServer({key: privateKey, cert: certificate}, app).listen(process.env.PORT);
+    https.createServer({key: privateKey, cert: certificate}, app).listen(process.env.PORT || 3000);
     // app.listen(3000);
   })
   .catch(err => {
