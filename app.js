@@ -118,7 +118,7 @@ mongoose
     wtimeout: 1000
   }})
   .then(result => {
-    https.createServer({key: privateKey, cert: certificate}, app).listen(process.env.PORT || 3000);
+    https.createServer({key: privateKey, cert: certificate}, app).listen(process.env.PORT || 8080);
     // app.listen(3000);
   })
   .catch(err => {
