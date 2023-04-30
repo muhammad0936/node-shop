@@ -13,6 +13,10 @@
   "devDependencies": {
     "nodemon": "^1.18.3"
   },
+  "engines": {
+    "node": "16.16.0"
+  }
+  ,
   "dependencies": {
     "@stripe/stripe-js": "^1.46.0",
     "bcryptjs": "^2.4.3",
